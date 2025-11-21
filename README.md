@@ -66,21 +66,17 @@ To write and execute an Assembly Language Program in 8086 to calculate the **sum
 CODE SEGMENT
 ASSUME CS:CODE, DS:CODE
 ORG 1000H
-
 MOV SI,2000H
 MOV CX,05H
 MOV AL,00H
 MOV AH,00H
-
 L1:
 ADD AL,[SI]
 INC SI
 LOOP L1
-
 MOV [SI],AL
 MOV AH,4CH
 INT 21H
-
 CODE ENDS
 END
 ```
